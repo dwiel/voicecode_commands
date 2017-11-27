@@ -148,3 +148,10 @@ pack.commands
       @runAtomCommand 'goToLine', input, true
       @do 'cursor:way-left'
       @do 'clipboard:paste'
+  "organize imports":
+    spoken: "organize imports"
+    description: "organize python imports. requires package: python-import-magic"
+    action: () ->
+      @runAtomCommand 'trigger',
+      {selector: 'atom-text-editor.is-focused', command: 'python-import-magic:update'},
+      true
