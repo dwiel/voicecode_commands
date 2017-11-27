@@ -252,7 +252,7 @@ Settings.vocabulary =
     'I am betting': 'embedding'
     "I'm betting": 'embedding'
     'gam': 'gan'
-    'ganndocker': 'gan'
+    'gann': 'gan'
 
     'ncloud interactive': 'ncloud interact'
 
@@ -332,6 +332,7 @@ Commands.addMisspellings('cursor:way-up', ['jeep with'])
 Commands.addMisspellings('common:save', ['surge'])
 Commands.addMisspellings('object:previous', ['trapreev'])
 Commands.addMisspellings('delete:word-forward', ['tight'])
+Commands.addMisspellings('clipboard:paste', ['sport'])
 
 Package.command 'open-atom',
   spoken: 'madam'
