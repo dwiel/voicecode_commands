@@ -100,12 +100,12 @@ pack.commands
     action: (input) ->
       @string '[['
 
-pack.implement
-  "editor:reformat":
-    action: ->
-      @key "Escape"
-      @string ",y"
-
+# pack.implement
+#   "editor:reformat":
+#     action: ->
+#       @key "Escape"
+#       @string ",y"
+#
 pack.commands
   enabled: true
 ,

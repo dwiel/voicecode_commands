@@ -14,13 +14,13 @@ pack = Packages.register
 #           @key 'delete'
 #         darwin._string input
 
-pack.implement
-  'editor:reformat': ->
-    @key 'f', 'control option'
-
 pack.commands
   enabled: true
 ,
+  'reformat':
+    spoken: 'reformat'
+    action: (input) ->
+      @key 'f', 'control option'
   "advanced-open-file":
     spoken: "advanced open file"
     description: "advanced open file atom plug-in"
@@ -84,6 +84,10 @@ pack.commands
       @runAtomCommand 'trigger',
       {selector: 'atom-text-editor.is-focused', command: 'find-and-replace:find-all'},
       true
+  'marcall':
+    spoken: 'mark all'
+    action: ->
+      @key 'f', 'command shift'
   'cell-pair':
     spoken: 'cell pair'
     description: 'select parent in ast'
@@ -155,3 +159,16 @@ pack.commands
       @runAtomCommand 'trigger',
       {selector: 'atom-text-editor.is-focused', command: 'python-import-magic:update'},
       true
+  "pain n":
+    spoken: "pain"
+    description: "move to pain n"
+    grammarType: 'integerCapture'
+    action: (input) ->
+      if input?
+        for i in [0..10] by 1
+          @key 'k', 'command'
+          @key 'left', 'command'
+
+        for i in [1..input] by 1
+          @key 'k', 'command'
+          @key 'right', 'command'

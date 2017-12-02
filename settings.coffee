@@ -4,8 +4,8 @@ _.merge Settings,
 
 Settings.dragon_darwin = {version: 5}
 Settings.os.defaultTerminal = 'iTerm'
-
 Settings.os.keyDelay = 8
+Settings.mouse.grid.hideAfterUse = true
 
 Packages.get('application').settings().applications = {
     "app store": "App Store"
