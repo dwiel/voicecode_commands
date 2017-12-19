@@ -36,6 +36,9 @@ pack.commands
     action: (input) ->
       @key "6", "control"
       @delay 500
+      @openApplication('Google Chrome')
+      # TODO: insetad of delay, wait until currenta pplication is chrome
+      @delay 500
       @key "1", "command"
       @key "l", "command"
       @string "youtube.com"
@@ -45,6 +48,9 @@ pack.commands
     description: "switch to media desktop and search youtube"
     action: (input) ->
       @key "6", "control"
+      @delay 500
+      @openApplication('Google Chrome')
+      # TODO: insetad of delay, wait until currenta pplication is chrome
       @delay 500
       @key "1", "command"
       @key "/"
