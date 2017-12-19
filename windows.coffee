@@ -21,7 +21,6 @@ pack.commands
     spoken: "window next screen"
     misspellings: ["window move screen right", "window screen right"]
     description: "move the current window onto the next screen"
-    continuous: false
     action: ->
       @key 'l', 'shift control option'
 
@@ -29,7 +28,6 @@ pack.commands
     spoken: "window preev screen"
     misspellings: ["window previous screen", "window move screen left", "window screen left"]
     description: "move the current window onto the previous screen"
-    continuous: false
     action: ->
       @key 'h', 'shift control option'
 
@@ -108,34 +106,35 @@ pack.commands
     spoken: "window full"
     misspellings: ["window full-screen"]
     description: "switch to fullscreen layout"
-    continuous: false
     action: ->
       @key 'd', 'option shift'
 
   "window tall layout":
     spoken: "window tall"
     description: "switch to tall layout"
-    continuous: false
     action: ->
       @key 'a', 'option shift'
+
+  "window middle tall layout":
+    spoken: "window middle"
+    description: "switch to middle tall layout"
+    action: ->
+      @key '`', 'control option shift'
 
   "window move main":
     spoken: "window move main"
     description: "make focused window the main window"
-    continuous: false
     action: ->
       @key 'enter', 'option shift'
 
   "window grow":
     spoken: "window grow"
     description: "increase size of main window"
-    continuous: false
     action: (input) ->
       @key 'L', 'option shift'
 
   "window shrink":
     spoken: "window shrink"
     description: "decrease size of main window"
-    continuous: false
     action: (input) ->
       @key 'H', 'option shift'
