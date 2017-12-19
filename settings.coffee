@@ -21,6 +21,7 @@ Packages.get('application').settings().applications = {
     mail: "Mail"
     preview: "Preview"
     "pie charm": "PyCharm CE"
+    powerpoint: "Microsoft PowerPoint"
     proxy: "Proxifier 2"
     signal: "Signal Private Messenger"
     slack: "Slack"
@@ -94,11 +95,13 @@ Settings.vocabulary =
     'yinyin',
     'channel yinyin',
     'fiaz',
+    'mergeable',
     'docker',
     'IU',
     'folsom',
     'folsom lab',
     'IPFS',
+    'hyper parameter',
 
     'epsilon',
     'start epsilon',
@@ -160,6 +163,8 @@ Settings.vocabulary =
     'angie': 'NG'
     'see far': 'cifar'
     'bit coin': 'bitcoin'
+    'readit': 'reddit'
+    'farm bought': 'farmbot'
     'nvidia SMI': 'nvidia-smi'
     'jace on': 'json'
 
@@ -173,6 +178,7 @@ Settings.vocabulary =
     'yang': ['fomp', 'deal', 'teek', 'ice', 'arch']
     'ice': ['womp', 'sky char', 'sky mowsh']
     'arch': ['womp', 'sky char', 'sky mowsh']
+    'format:capitalize-next-word': ['none']
   translations:
     'teak': 'k'
     'virg': 'v'
@@ -218,6 +224,8 @@ Settings.vocabulary =
     'endo': 'end'
     'and oh': 'end'
     'rappers': 'wrappers'
+    'poynter': 'pointer'
+    'numb': 'num'
 
     'nirvana': 'nervana'
     'terrace': 'keras'
@@ -228,6 +236,8 @@ Settings.vocabulary =
     'dems': 'dims'
     'seek to seek': 'Seq2Seq'
     'data set': 'dataset'
+    'data loader': 'dataloader'
+    'call back': 'callback'
     'jim': 'gym'
     'angie': 'ng'
     'and g': 'ng'
