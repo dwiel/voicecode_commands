@@ -77,6 +77,13 @@ pack.commands
       @delay 300
       @string 'git diff prev'
       @key 'enter'
+  'toggle-git-pane':
+    spoken: 'toggle jet'
+    description: 'toggle the github pane'
+    action: ->
+      @runAtomCommand 'trigger',
+      {selector: 'atom-text-editor.is-focused', command: 'github:toggle-git-tab'},
+      true
   'find-and-replace:find-all':
     spoken: 'find and replace all'
     description: 'find and replace all'
@@ -137,27 +144,36 @@ pack.commands
       @runAtomCommand 'trigger',
       {selector: 'atom-text-editor.is-focused', command: 'bracket-matcher:remove-matching-brackets'},
       true
+  'move-to-matching-brackets':
+    spoken: 'go match'
+    description: 'move cursor to matching bracket'
+    action: ->
+      @runAtomCommand 'trigger',
+      {selector: 'atom-text-editor.is-focused', command: 'bracket-matcher:go-to-matching-bracket'},
+      true
   "cut line":
     spoken: "cut line"
     description: "cut line"
     grammarType: 'integerCapture'
     action: (input) ->
-      @runAtomCommand 'goToLine', input, true
+      if input?
+        @runAtomCommand 'goToLine', input, true
       @do 'clipboard:cut'
   "paste line":
     spoken: "paste line"
     description: "paste line {line_number}"
     grammarType: 'integerCapture'
     action: (input) ->
-      @runAtomCommand 'goToLine', input, true
+      if input?
+        @runAtomCommand 'goToLine', input, true
       @do 'cursor:way-left'
       @do 'clipboard:paste'
   "organize imports":
     spoken: "organize imports"
-    description: "organize python imports. requires package: python-import-magic"
+    description: "organize python imports. requires package: python-isort"
     action: () ->
       @runAtomCommand 'trigger',
-      {selector: 'atom-text-editor.is-focused', command: 'python-import-magic:update'},
+      {selector: 'atom-text-editor.is-focused', command: 'python-isort:sortImports'},
       true
   "pain n":
     spoken: "pain"
@@ -169,6 +185,7 @@ pack.commands
           @key 'k', 'command'
           @key 'left', 'command'
 
-        for i in [1..input] by 1
+        # if input is 1, we don't want to move right any
+        for i in [2..input] by 1
           @key 'k', 'command'
           @key 'right', 'command'
