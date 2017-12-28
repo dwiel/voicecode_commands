@@ -151,6 +151,13 @@ pack.commands
       @runAtomCommand 'trigger',
       {selector: 'atom-text-editor.is-focused', command: 'bracket-matcher:go-to-matching-bracket'},
       true
+  'preview-markdown':
+    spoken: 'preview markdown'
+    description: 'display rendering of markdown content'
+    action: ->
+      @runAtomCommand 'trigger',
+      {selector: 'atom-text-editor.is-focused', command: 'markdown-preview:toggle'},
+      true
   "cut line":
     spoken: "cut line"
     description: "cut line"
