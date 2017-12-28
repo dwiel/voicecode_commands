@@ -48,6 +48,13 @@ pack.commands
     action: (input) ->
       @key 'b', 'control'
       @key '['
+  "tmux-window":
+    spoken: "tmux window"
+    description: "tmux change window: ctrl-b $1"
+    grammarType: 'integerCapture'
+    action: (input) ->
+      @key 'b', 'control'
+      @key input
   "tmux-window-new":
     spoken: "tmux window new"
     description: "tmux new window: ctrl-b c"
