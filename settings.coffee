@@ -109,35 +109,33 @@ Settings.vocabulary =
     'model end',
     'decay',
     'embedder',
+    'ethereum',
 
     'yield',
     'python3'
   ],
   vocabularyAlternate:
+    # miscellaneous
     'chuck': 'shock'
-    'H top': 'htop'
-    'IO top': 'iotop'
-    'mobile shell': 'mosh'
     'aldo': 'algo'
     'GPUs': 'gpus'
-    'D space': 'dspace'
     'docker file': 'dockerfile'
+    'deck': 'deque'
+    'compose a bull': 'composable'
+    'jace on': 'json'
+
+    # linux
+    'H top': 'htop'
+    'IO top': 'iotop'
+    'T mucks': 'tmux'
+    'mobile shell': 'mosh'
+    'dot shell': '.sh'
+
+    # python
     'virtual env': 'virtualenv'
     'V env': 'venv'
     'pie V env': 'pyvenv'
-    'N graph': 'ngraph'
-    'theeano': 'theano'
-    'tensor flow': 'tensorflow'
-    'tensor board': 'tensorboard'
-    'py torch': 'pytorch'
-    'hyper opt': 'hyperopt'
-    'open AI': 'openai'
-    'RMS prop': 'rmsprop'
-    'soft max': 'softmax'
-    'tan H': 'tanh'
-    'deck': 'deque'
     'dot pie': '.py'
-    'dot shell': '.sh'
     'pie dot test': 'py.test'
     'pie test': 'pytest'
     'python three': 'python3'
@@ -150,24 +148,42 @@ Settings.vocabulary =
     'matt plot lib': 'matplotlib'
     'see pickle': 'cPickle'
     'pie plot': 'pyplot'
+    'hyper opt': 'hyperopt'
     'D type': 'dtype'
-    'D convolution': 'deconvolution'
+
+    # names
     'the wheel': 'dwiel'
     'Z the wheel': 'zdwiel'
-    'compose a bull': 'composable'
-    'T mucks': 'tmux'
     'shayna': 'shaina'
     'R june': 'arjun'
     'hareenee': 'harini'
+
+    # ngraph
+    'N graph': 'ngraph'
     'make access': 'make axis'
     'angie': 'NG'
+
+    # deep learning
     'see far': 'cifar'
+    'theeano': 'theano'
+    'tensor flow': 'tensorflow'
+    'tensor board': 'tensorboard'
+    'py torch': 'pytorch'
+    'open AI': 'openai'
+    'RMS prop': 'rmsprop'
+    'soft max': 'softmax'
+    'tan H': 'tanh'
     'bit coin': 'bitcoin'
     'readit': 'reddit'
     'farm bought': 'farmbot'
     'nvidia SMI': 'nvidia-smi'
-    'jace on': 'json'
+    'log its': 'logits'
+    'a fine': 'affine'
+    'D convolution': 'deconvolution'
+    'math some': 'sum'
 
+    # sgi
+    'D space': 'dspace'
     'P pham': 'PFAM'
     'P phams': 'PFAMs'
   sequences:
@@ -219,6 +235,7 @@ Settings.vocabulary =
     'repose': 'repos'
     'ellis': 'elif'
     'deck': 'deque'
+    "log it's": 'logits'
     'sell': 'cell'
     'jeep you': 'gpu'
     'endo': 'end'
@@ -247,6 +264,8 @@ Settings.vocabulary =
     'all the rhythms': 'algorithms'
     'all rhythms': 'algorithms'
     'access': 'axis'
+    'waits': 'weights'
+    'wait': 'weight'
     'dk': 'decay'
     'epoque': 'epoch'
     'epic': 'epoch'
@@ -261,6 +280,7 @@ Settings.vocabulary =
     'and betting': 'embedding'
     'I am betting': 'embedding'
     "I'm betting": 'embedding'
+    'phil': 'fill'
     'gam': 'gan'
     'gann': 'gan'
 
@@ -335,6 +355,7 @@ Settings.insert = {
   }
 }
 
+# NOTE: `sherlock` can be used to look up command names
 Commands.addMisspellings('common:enter', ['chuck', 'shot', 'chop', 'shop', 'shark'])
 Commands.addMisspellings('symbols:comma-space', ['swype'])
 Commands.addMisspellings('cursor:way-left', ['left the'])
@@ -343,6 +364,7 @@ Commands.addMisspellings('common:save', ['surge'])
 Commands.addMisspellings('object:previous', ['trapreev'])
 Commands.addMisspellings('delete:word-forward', ['tight'])
 Commands.addMisspellings('clipboard:paste', ['sport'])
+Commands.addMisspellings('format:lower-no-spaces', ['smashed'])
 
 Package.command 'open-atom',
   spoken: 'madam'
